@@ -15,39 +15,39 @@
 * A raymcarcher that renders primitive shapes (sphere, cube) with diffuse lighting and some animation.
 * View the video [here](https://twitter.com/AyoubKhammasi/status/1138141605930700801)
 ***
-![](ReadmeImages\raymarcher.jpg)
+![](ReadmeImages/raymarcher.jpg)
 ***
 
 #### 2. Droplets
 * An abstract black and white animation of droplets.
 * View the video [here](https://twitter.com/AyoubKhammasi/status/1187099594435551233)
 ***
-![](ReadmeImages\wavlets.jpg)
+![](ReadmeImages/wavlets.jpg)
 ***
 
 #### 3. WaveyCircleFilling
 * A simple animation of a circle being filled with smooth waves.
 * View the video [here](https://twitter.com/AyoubKhammasi/status/1137482053707083781)
 ***
-![](ReadmeImages\charging.jpg)
+![](ReadmeImages/charging.jpg)
 ***
 
 #### 4. ChargingAnimation
 * A recreation of the charging animation used in Huawei phones.
 * View the video [here](https://twitter.com/AyoubKhammasi/status/1126928804562259968)
 ***
-![](ReadmeImages\huawei.jpg)
+![](ReadmeImages/huawei.jpg)
 ***
 
 ### 2. [Shadertoy](https://www.shadertoy.com/)
 
 #### 1. Water Dance
-* Interactive fluid simulation?
+* Interactive fluid simulation.
 * Implementation of Lattice-Boltzmann method in a fragment shader.
 * **BufferA** is the pass where the simulation happen, densities are calculated and passed to the **Image** shader where data is processed to estimate normals and draw to the screen.
 * Check the live preview [here](https://www.shadertoy.com/view/WsGGWt)
 ***
-![](ReadmeImages\fluidSim.png)
+![](ReadmeImages/fluidSim.PNG)
 ***
 
 ## HLSL SHADERS
