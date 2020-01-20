@@ -1,0 +1,70 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+//Textures
+Texture2D<float4> spriteSheet;
+RWTexture3D<float4> result;
+//Sampler states
+SamplerState sampler_spriteSheet;
+
+//Metadata vars
+//Number of frames in X and Y components, sprite sheet resolution in Z and W
+float4 data;
+int depth;
+int depthStep;
+int numberOfSprites;
+
+//Converts a 3 dimensional normalized indices uvw to 2 dimensional uv
+float2 id2uv(uint3 id, out float2 nextSprite)
+{
+	uint numberOfSprites =((uint)data.x * (uint)data.y) - 1;
+	//float zStep = 1 / (numberOfSprites);
+	
+	//Texture resolution in 3 directions
+	float3 resolution = float3(data.zw / data.xy, depth);
+	//this can be used to sample the sprite sheet
+    float3 uvw = id.xyz / resolution; 
+	
+    uint zSprites = (id.z / depthStep);
+	//X and Y are the origin 
+	uint y = zSprites / (uint)(data.x);
+	uint x = zSprites % (uint)(data.x);
+
+	//normalized UVs
+	float2 nUVs = uvw.xy / (data.xy);
+	
+	float2 res = ((float2(x, y) / (data.xy)) + nUVs);
+	//finding the UVs in the next Sprite
+
+	zSprites++;
+	y = zSprites / (uint)(data.x);
+	x = zSprites % (uint)(data.x);
+
+	nextSprite = ((float2(x, y) / (data.xy)) + nUVs);
+	return res;
+}
+
+[numthreads(1,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+	
+
+	float4 sampl1, sampl2;
+	float sampl;
+	float2 nextUV;
+	float2 uv = id2uv(id, nextUV);
+	
+	//Changing the UV space to the sprite sheet space
+	uv.y = 1.0 - uv.y;
+	nextUV.y = 1.0 - nextUV.y;
+	sampl1 = spriteSheet.SampleLevel(sampler_spriteSheet, uv, 0);
+	sampl2 = spriteSheet.SampleLevel(sampler_spriteSheet, nextUV, 0);
+
+
+	float lerper = (((float)(id.z % depthStep)) / depthStep);
+	sampl = lerp(sampl1.w, sampl2.w, clamp(lerper, 0.0,1.0));
+
+
+	//the sprite sheet origin is on the top left, so we need to convert the UVs to that space
+	result[id] = sampl;// spriteSheet.SampleLevel(sampler_spriteSheet, uv, 0).w;
+}
