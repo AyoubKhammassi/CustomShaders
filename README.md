@@ -17,7 +17,7 @@
 * **BufferA** is the pass where the simulation happen, densities are calculated and passed to the **Image** shader where data is processed to estimate normals and draw to the screen.
 * Check the live preview [here](https://www.shadertoy.com/view/WsGGWt)
 ***
-![](ReadmeImages\fluidSim.png)
+![](ReadmeImages/fluidSim.PNG)
 ***
 #### 2. Path of Light
 * A procedural Raymarching Shader
@@ -27,7 +27,7 @@
 * The background is made using UV manipulation..
 * Check the live preview [here](https://www.shadertoy.com/view/tsXcDr)
 ***
-![](ReadmeImages\pathoflight.jpg)
+![](ReadmeImages/pathoflight.JPG)
 ***
 
 #### 3. Darth Vader
@@ -39,7 +39,7 @@
 * Not realtime rendering but interactive progressive rendering.
 * Check the live preview [here](https://www.shadertoy.com/view/WdfBzr)
 ***
-![](ReadmeImages\darthvader.png)
+![](ReadmeImages/darthvader.PNG)
 ***
 
 ### 2. [Mobile Shader Editor](https://play.google.com/store/apps/details?id=de.markusfisch.android.shadereditor&hl=en)
