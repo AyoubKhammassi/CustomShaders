@@ -9,7 +9,40 @@
 ***
 
 ## GLSL SHADERS
-### 1. [Mobile Shader Editor](https://play.google.com/store/apps/details?id=de.markusfisch.android.shadereditor&hl=en)
+### 1. [Shadertoy](https://www.shadertoy.com/)
+
+#### 1. Water Dance
+* Interactive fluid simulation
+* Implementation of Lattice-Boltzmann method in a fragment shader.
+* **BufferA** is the pass where the simulation happen, densities are calculated and passed to the **Image** shader where data is processed to estimate normals and draw to the screen.
+* Check the live preview [here](https://www.shadertoy.com/view/WsGGWt)
+***
+![](ReadmeImages\fluidSim.png)
+***
+#### 2. Path of Light
+* A procedural Raymarching Shader
+* Composed of a terrain and Blackhole absorbing light
+* The terrain SDF is made using a height-field by sampling one texture using different scales and different heights .It's then textured and shaded.
+
+* The background is made using UV manipulation..
+* Check the live preview [here](https://www.shadertoy.com/view/tsXcDr)
+***
+![](ReadmeImages\pathoflight.jpg)
+***
+
+#### 3. Darth Vader
+* A fully procedural Darth Vader helmet
+* Rendered using raymarching and progressive stochastic shading
+* The scene is composed using primitive SDFs, SDF operators and transformations.
+* At each hit point on a surface, two rays are bounced in random direction depending on the material, these rays are for specular and for diffuse contribution
+* Features inlude: PBR materials, emissive materials, Depth of Field, Specular and Diffuse.
+* Not realtime rendering but interactive progressive rendering.
+* Check the live preview [here](https://www.shadertoy.com/view/WdfBzr)
+***
+![](ReadmeImages\darthvader.png)
+***
+
+### 2. [Mobile Shader Editor](https://play.google.com/store/apps/details?id=de.markusfisch.android.shadereditor&hl=en)
 
 #### 1. Raymarcher
 * A raymcarcher that renders primitive shapes (sphere, cube) with diffuse lighting and some animation.
@@ -39,16 +72,7 @@
 ![](ReadmeImages\huawei.jpg)
 ***
 
-### 2. [Shadertoy](https://www.shadertoy.com/)
 
-#### 1. Water Dance
-* Interactive fluid simulation?
-* Implementation of Lattice-Boltzmann method in a fragment shader.
-* **BufferA** is the pass where the simulation happen, densities are calculated and passed to the **Image** shader where data is processed to estimate normals and draw to the screen.
-* Check the live preview [here](https://www.shadertoy.com/view/WsGGWt)
-***
-![](ReadmeImages\fluidSim.png)
-***
 
 ## HLSL SHADERS
 ### 1. [Unity](https://unity.com/)
