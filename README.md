@@ -48,28 +48,28 @@
 * A raymcarcher that renders primitive shapes (sphere, cube) with diffuse lighting and some animation.
 * View the video [here](https://twitter.com/AyoubKhammasi/status/1138141605930700801)
 ***
-![](ReadmeImages\raymarcher.jpg)
+![](ReadmeImages/raymarcher.jpg)
 ***
 
 #### 2. Droplets
 * An abstract black and white animation of droplets.
 * View the video [here](https://twitter.com/AyoubKhammasi/status/1187099594435551233)
 ***
-![](ReadmeImages\wavlets.jpg)
+![](ReadmeImages/wavlets.jpg)
 ***
 
 #### 3. WaveyCircleFilling
 * A simple animation of a circle being filled with smooth waves.
 * View the video [here](https://twitter.com/AyoubKhammasi/status/1137482053707083781)
 ***
-![](ReadmeImages\charging.jpg)
+![](ReadmeImages/charging.jpg)
 ***
 
 #### 4. ChargingAnimation
 * A recreation of the charging animation used in Huawei phones.
 * View the video [here](https://twitter.com/AyoubKhammasi/status/1126928804562259968)
 ***
-![](ReadmeImages\huawei.jpg)
+![](ReadmeImages/huawei.jpg)
 ***
 
 
